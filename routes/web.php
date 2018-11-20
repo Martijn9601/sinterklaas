@@ -16,3 +16,19 @@ Route::get('/', function () {
 });
 
 Route::apiResource('api/ad', 'API\AdController');
+
+Route::resource('meeting', 'meetingController', [
+	'except' => ['edit', 'create']
+]);
+
+Route::resource('meeting/registration', 'RegistrationController', [
+	'only' => ['store', 'destroy']
+]);
+
+Route::post('user',[
+	'uses' => 'AuthController@store'
+]);
+
+Route::post('user/signin', [
+	'uses' => 'AuthController@signin'
+]);
