@@ -32,3 +32,7 @@ Route::post('user',[
 Route::post('user/signin', [
 	'uses' => 'AuthController@signin'
 ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

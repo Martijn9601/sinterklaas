@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class MeetingController extends Controller
 {
+    public function __construct()
+    {
+        //this->middleware('name');
+    }   
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +17,7 @@ class MeetingController extends Controller
      */
     public function index()
     {
-        //
+        return "It works!";
     }
 
     /**
@@ -24,7 +28,11 @@ class MeetingController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $time = $request->input('time');
+        $user_id = $request->input('user_id');
+        return "It works!";
     }
 
     /**
@@ -35,7 +43,7 @@ class MeetingController extends Controller
      */
     public function show($id)
     {
-        //
+        return "It works!";
     }
 
     /**
@@ -47,7 +55,11 @@ class MeetingController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $time = $request->input('time');
+        $user_id = $request->input('user_id');
+        return "It works!";
     }
 
     /**
@@ -58,6 +70,6 @@ class MeetingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return "It works!";
     }
 }
