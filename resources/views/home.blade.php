@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Je bent ingelogd!<br>
+
+                        <a href="{{ url('../new_lijst') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Maak een verlanglijst</a>
+                        <a href="{{ url('../my_lijsts') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Mijn lijstjes</a>
+                
+                    </ul>
                 </div>
             </div>
         </div>

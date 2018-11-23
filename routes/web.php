@@ -36,3 +36,10 @@ Route::post('user/signin', [
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('new_lijst', 'ListController@create');
+Route::post('new_lijst', 'ListController@store');
+
+Route::get('my_lijsts', 'ListController@userTickets');
+
+Route::get('tickets/{ticket_id}', 'ListController@show');
